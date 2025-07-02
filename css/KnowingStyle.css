@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Bubblegum Sans","Tajawal", sans-serif;
+    background: linear-gradient(45deg, #4ecdc4 , #45b7d1);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    color: #317989;
+}
+
+/* navbar */
+
+nav{
+    background-color: #aff0ff;
+    color: #317989;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav button{
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    font-size: larger;
+    cursor: pointer;
+    display: none;
+}
+
+/* sections */
+
+#container-box{
+    background-color: #163238;
+    color: #4ecdc4;
+    border-radius: 25px;
+    padding: 150px 100px;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.7);
+}
+
+.gen{
+    width: 80%;
+    display: none;
+}
+.gen h1{
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+#gen-btns{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap:30px;
+    width: 100%;
+}
+.btn{
+    font-family: inherit;
+    width: 100%;
+    padding: 25px 15px;
+    background-color:#FFB84D ;
+    font-size: 1.6rem;
+    border: none;
+    margin: 15px 0;
+    border-radius: 8px;
+    color: #163238;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+}
+.btn:active{
+    transform: scale(1);
+}
+
+input{
+    font-family: inherit;
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: none;
+    text-align: right;
+    font-size: 25px;
+    transition: all 0.4s ease;
+}
+input:focus{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px 0 rgba(82, 171, 255, 0.7);
+}
+
+.result{
+    display: none;
+    font-size: 1.5rem;
+}
+
+.refresh{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFB84D;
+    padding: 10px 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.refresh:hover{
+    background-color: #ffb84d60;
+}
+
+/* Footer */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    background-color: #317989;
+    color: #aff0ff;
+}
+footer div{
+    padding: 25px 50px;
+}
+footer p{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.socials{
+    text-align: left;
+}
+.socials a{
+    /* color: inherit; */
+    font-size: 1.3rem;
+    color: #163238;
+    cursor: pointer;
+     text-decoration: none;
+}
+.text-content{
+    text-align: right;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    nav button{
+        display: block;
+        z-index: 100;
+    }
+
+    nav .uslsList{
+        display: none;
+    }
+
+    .pagesList{
+        background-color: #31798950;
+        color: #aff0ff;
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 50%;
+        height: 100vh;
+        z-index: 99;
+    }
+
+    .pagesList.openList{
+        display: block;
+    }
+
+    .pagesList li{
+        margin: 5px 0;
+        padding: 15px 10px;
+        text-shadow: 0 0 5px #000;
+        transition: 250ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .pagesList li:hover{
+        background-color: #00000050;
+        color: #aff0ff;
+    }
+
+    /* sections */
+
+    #container-box{
+        height: 70%;
+        padding: 50px 25px;
+        margin: 50px 25px;
+    }
+
+    .gen h1{
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+    #gen-btns{
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+
+@media (max-width: 600px) {
+    .pagesList{
+        width: 100%;
+    }
+    footer p{
+        font-size: 1.02rem;
+        width: 120%;
+    }
+
+    #container-box{
+        padding: 100px 25px;
+        margin: 50px 15px;
+    }
+    
+    .gen h1{
+        font-size: 1.5rem;
+    }
+
+    input{
+        font-size: 15px;
+    }
+
+    .btn{
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+}
