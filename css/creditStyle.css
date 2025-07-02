@@ -99,7 +99,7 @@ nav button{
     
 }
 .eman-profile .pro-bg{
-    background: url("/images/Spiderman logo.jpg");
+    background: url(/images/Spiderman\ logo.jpg);
     background-position: center;
 }
 .eman-profile .fun-box{
