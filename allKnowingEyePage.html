@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/KnowingStyle.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>المغفلجين - قصة تفاعيلية</title>
+</head>
+<body>
+
+    <nav>
+        <button id="navBtn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="uslsList">
+            <li>جربت تتنفس؟؟</li>
+        </ul>
+        
+        <ul class="pagesList">
+            <li><a href="./creditPage.html">Credits</a></li>
+            <li><a href="./examsPage.html">اختبارات</a></li>
+            <li><a href="./allKnowingEyePage.html">اعرف نفسك</a></li>
+            <li><a href="./loadingPage.html">معلومة خرافيه</a></li>
+            <li><a href="./crazyStorePage.html">المتجر</a></li>
+            <li><a href="./storyGamePage.html">قصة تفاعيلية</a></li>
+            <li><a href="./index.html">الصفحة الرئيسية</a></li>
+        </ul>
+        
+        <h1><a href="./index.html">المغفلجين</a></h1>
+    </nav>
+    
+    <!-- fasel wa nowasel -->
+
+    <section id="container-box">
+
+        <div id="gen-btns">
+            <button class="btn by-name" onclick="genSwitcher('name')">شريك حياتك علي حسب اسمك</button>
+            <button class="btn by-age" onclick="genSwitcher('age')">مستقبلك علي حسب سنك</button>
+        </div>
+
+        <div class="gen" id="name-gen">
+            <h1>!اعرف اسم شريك حياتك</h1>
+            <input type="text" placeholder="...اكتب اسمك" id="name-input">
+            <button class="btn" onclick="nameSelector()">ايه هو؟</button>
+            <p class="result"></p>
+
+            <button class="refresh" onclick="refresh()">رجوع</button>
+        </div>
+
+        <div class="gen" id="age-gen">
+            <h1>!اعرف مستقبلك</h1>
+            <input type="text" placeholder="...اكتب سنك" id="age-input">
+            <button class="btn" onclick="futureSelector()">ايه هو؟</button>
+            <p class="result"></p>
+
+            <button class="refresh" onclick="refresh()">رجوع</button>
+        </div>
+        
+    </section>
+    
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="socials">
+            <a href="https://www.facebook.com/rosemary.force.2025rosemary.force.2025 " target="_blank">
+                إيمان
+               <i class="fa-brands fa-facebook"></i>
+            </a>
+                <br>
+            <a href="https://www.instagram.com/majesty.wastaken/" target="_blank"> 
+                ماجستي
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <div class="text-content">
+        <h1>المغفلجين</h1>
+        
+        <p>😂 !نسينا نعدل الصفحة دي... يلا طير وتعالى تاني بعدين وهتبقى مختلفة</p>
+        </div>
+            
+    </footer>
+
+</body>
+<script src="./js/genScript.js"></script>
+<script src="./js/navbarScript.js"></script>
+<script src="./js/all.min.js"></script>
+</html>

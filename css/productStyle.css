@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Bubblegum Sans","Tajawal", sans-serif;
+    background: linear-gradient(45deg , #4ecdc4 , #45b7d1);
+    color: #fff;
+    text-align: center;
+    color: #317989;
+}
+
+
+/* navbar */
+
+nav{
+    background-color: #aff0ff;
+    color: #317989;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav button{
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    font-size: larger;
+    cursor: pointer;
+    display: none;
+}
+
+/* sections */
+
+section{
+    padding: 25px;
+}
+
+section h1{
+    font-size: 35px;
+}
+
+#product-box span{
+    background-color: #aff0ff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    padding: 50px 25px;
+    margin: 25px 0;
+    width: 90%;
+}
+
+#product-box img{
+    width: 350px;
+    object-fit: cover;
+    height: 400px;
+    border-radius: 5px;
+    justify-self: center;
+}
+
+#product-box .product-info{
+    text-align: right;
+}
+#product-box .product-info p{
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+#product-box .product-btns{
+    margin-right: 100px;
+    font-size: 30px;
+}
+.btn{
+    font-family: inherit;
+    padding: 10px 50px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color:#FFB84D ;
+    color: #163238;
+    border:none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.02);
+}
+.btn:active{
+    transform: scale(1);
+}
+
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    background-color: #317989;
+    color: #aff0ff;
+}
+footer div{
+    padding: 25px 50px;
+}
+footer p{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.socials{
+    text-align: left;
+}
+.socials a{
+    /* color: inherit; */
+    font-size: 1.3rem;
+    color: #163238;
+    cursor: pointer;
+     text-decoration: none;
+
+}
+.text-content{
+    text-align: right;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    nav button{
+        display: block;
+        z-index: 100;
+    }
+
+    nav .uslsList{
+        display: none;
+    }
+
+    .pagesList{
+        background-color: #31798950;
+        color: #aff0ff;
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 50%;
+        height: 100vh;
+        z-index: 99;
+    }
+
+    .pagesList.openList{
+        display: block;
+    }
+
+    .pagesList li{
+        margin: 5px 0;
+        padding: 15px 10px;
+        text-shadow: 0 0 5px #000;
+        transition: 250ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .pagesList li:hover{
+        background-color: #00000050;
+        color: #aff0ff;
+    }
+
+    /* sections */
+
+    #product-box span{
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+        width: 80%;
+    }
+
+    #product-box .product-btns{
+        margin: 0;
+        margin-top: 25px;
+    }
+
+    #product-box img{
+        width: 100%;
+        height: fit-content;
+        border-radius: 5px;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagesList{
+        width: 100%;
+    }
+    footer p{
+        font-size: 1.02rem;
+        width: 120%;
+    }
+
+    #product-box span{
+        width: fit-content;
+    }
+}

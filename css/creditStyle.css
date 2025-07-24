@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Bubblegum Sans","Tajawal", sans-serif;
+    background: linear-gradient(45deg, #4ecdc4 , #45b7d1);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    color: #317989;
+}
+
+/* navbar */
+
+nav{
+    background-color: #aff0ff;
+    color: #317989;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav button{
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    font-size: larger;
+    cursor: pointer;
+    display: none;
+}
+
+/* sections */
+
+#profiles{
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+}
+
+.eman-profile, .majesty-profile{
+    position: relative;
+    padding-bottom: 25px;
+    margin: 50px;
+    background-color: #163238;
+    border-radius: 10px;
+    border: 5px solid #163238;
+}
+
+.pro-bg{
+    position: absolute;
+    background-color: #317989;
+    border-radius: 10px;
+    width: 100%;
+    height: 25%;
+}
+
+.pfp{
+    border: 5px solid #163238;
+    box-shadow: 0 0 10px -3px #000;
+    position: relative;
+    margin-top: 90px;
+    width: 150px;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+.pfp:hover{
+    transform: scale(1.05);
+}
+
+.text-box{
+    text-align: left;
+    padding: 0 25px;
+}
+
+/* emanSection */
+.eman-profile .pragraph{
+    text-align: center;
+    margin: 3px 0;
+    
+}
+.eman-profile .pro-bg {
+    background: url('../images/SpidermanLogo.jpg'); /* استبدل المسافة بـ %20 */
+    background-position: center;
+    background-size: cover; /* عشان تغطي المساحة */
+}
+.eman-profile .fun-box{
+    background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      line-height: 1.6;
+}
+/* Majesty Section */
+
+.majesty-profile .pro-bg{
+    background: linear-gradient(to right, #6082b650, #93b6f070, #d1f0ff90),  url('../images/M-PFP.jpg');
+    background-position: bottom;
+}
+
+.majesty-profile .bio{
+    margin: 10px 0;
+}
+
+.majesty-profile .fun-box{
+    font-size: 0.8rem;
+    background-color: #11262b;
+    border: 1px solid #0b191d;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px 1px #2c3e50;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+.majesty-profile .fun-box:hover{
+    transform: scale(1.02);
+}
+
+.majesty-profile .breaker{
+    text-align: center;
+}
+
+/* Footer */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    background-color: #317989;
+    color: #aff0ff;
+}
+footer div{
+    padding: 25px 50px;
+}
+footer p{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.socials{
+    text-align: left;
+}
+.socials a{
+    /* color: inherit; */
+    font-size: 1.3rem;
+    color: #163238;
+    cursor: pointer;
+     text-decoration: none;
+}
+.text-content{
+    text-align: right;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    nav button{
+        display: block;
+        z-index: 100;
+    }
+
+    nav .uslsList{
+        display: none;
+    }
+
+    .pagesList{
+        background-color: #31798950;
+        color: #aff0ff;
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 50%;
+        height: 100vh;
+        z-index: 99;
+    }
+
+    .pagesList.openList{
+        display: block;
+    }
+
+    .pagesList li{
+        margin: 5px 0;
+        padding: 15px 10px;
+        text-shadow: 0 0 5px #000;
+        transition: 250ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .pagesList li:hover{
+        background-color: #00000050;
+        color: #aff0ff;
+    }
+
+    #profiles{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pagesList{
+        width: 100%;
+    }
+    footer p{
+        font-size: 1.02rem;
+        width: 120%;
+    }
+
+}
